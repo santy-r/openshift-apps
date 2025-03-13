@@ -1,1 +1,5 @@
-
+FROM quay.io/redhattraining/httpd-parent
+LABEL io.openshift.expose-services="8080:http"
+RUN yum commands 
+ONBUILD COPY src/ /var/www/html
+USER 1001
