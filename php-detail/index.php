@@ -8,21 +8,22 @@
   print "The value of the variable MY_PASSWORD is " .getenv('MY_PASSWORD') . "\n";
   echo "<br/><br/>";
 
-  if (file_exists('/my_secret/id_rsa')) {
-    echo "/my_secret/id_rsa contains: ";
+  if (file_exists('/detailsecret/id_rsa')) {
+    echo "/detailsecret/id_rsa contains: ";
     echo "<br/><br/>";
-    echo nl2br(file_get_contents( "/my_secret/id_rsa" ));
+    echo nl2br(file_get_contents( "/detailsecret/id_rsa" ));
    } else {
-    echo "Nothing was found at /my_secret/id_rsa.";
+    echo "Nothing was found at /detailsecret/id_rsa.";
     }
 
   echo "<br/><br/>";
+ 
 
-  if (file_exists('/my_mount/id_rsa.pub')) {
-    echo "/my_mount/id_rsa.pub contains: ";
+  if (file_exists('/detailfilemount/id_rsa.pub')) {
+    echo "/detailfilemount/id_rsa.pub contains: ";
     echo "<br/><br/>";
-    echo nl2br(file_get_contents( "/my_mount/id_rsa.pub" ));
+    echo nl2br(file_get_contents( "/detailfilemount/id_rsa.pub" ));
    } else {
-    echo "Nothing was found at /my_mount/id_rsa.pub";
+    echo "Nothing was found at /detailfilemount/id_rsa.pub";
     }
 ?>
